@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "a!"
+const prefix = "w!"
 
 client.on('ready', () => {
-  client.user.setGame('a!help ', 'https://www.youtube.com/channel/UCqgQjlbqOM_QxQjF97yBSJw?view_as=subscriber')
+  client.user.setGame('w!help ', 'https://www.youtube.com/channel/UCqgQjlbqOM_QxQjF97yBSJw?view_as=subscriber')
 })   
 
   client.on('message', message =>{
@@ -25,9 +25,9 @@ client.on('message', message =>{
   if ( message.content.startsWith(prefix+ "help")) {
     const embed = new Discord.RichEmbed()
     .setTitle('BOT INFO')
-    .setDescription(`•prefix --> i!
+    .setDescription(`•prefix --> w!
 BOT COMMANDS
-• || a!mass || a!support || a!info || a!say || a!ping || a!serverinfo || a!restart || a!invite || a!botinfo || `)
+• || w!mass || w!support || w!info || w!say || w!ping || w!serverinfo || w!restart || w!invite || w!botinfo || `)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -35,8 +35,8 @@ BOT COMMANDS
 });
 
 client.on('message', message => {
-    if (message.author.id == '345142580687798273') {
-    if (message.content.startsWith(`a!restart`)) {
+    if (message.author.id == '302738443090526209') {
+    if (message.content.startsWith(`w!restart`)) {
             resetBot(message.channel);
     }
   }
@@ -91,13 +91,13 @@ client.on('message', message =>{
 if (message.content.startsWith(prefix + 'botinfo')) {
   const embed = new Discord.RichEmbed()
   embed.addField('BOT INFO')
-  embed.addField('Name', 'AvengerBOT', true)
-  embed.addField('Prefix', 'a!', true)
-  embed.addField('Tag:', '6777', true)
+  embed.addField('Name', 'WOLVES', true)
+  embed.addField('Prefix', 'w!', true)
+  embed.addField('Tag:', '5149', true)
   embed.addField('Created at:', '2018-06-13 12:52:59.660000', true)
-  embed.addField('ID', '345142580687798273', true)
+  embed.addField('ID', '302738443090526209', true)
   embed.addField('Made with:', 'Node')
-  embed.addField('Creator', '@MaxPenibilul#0001', true)
+  embed.addField('Creator', '@Intact.#5149', true)
   embed.setColor('RANDOM')
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
@@ -122,8 +122,8 @@ client.on('message', message =>{
 });    
    
   client.on('message', message => {    
-    if(message.content.startsWith('a!mass')) {
-    if(message.author.id === "345142580687798273" ||
+    if(message.content.startsWith('w!mass')) {
+    if(message.author.id === "302738443090526209" ||
 message.author.id === "405337137735663618"){
        let args = message.content.split(" ").slice(1);         
        var argresult = args.join(" ")      
@@ -136,41 +136,41 @@ member.send(reason)
 message.delete() }})}}} });
 
 client.on('message', msg => {
-    if (msg.content === 'a!invite') {
-      msg.channel.send('Invite **AvengerBOT**https://discordapp.com/api/oauth2/authorize?client_id=464720386693529610&permissions=8&scope=bot:');
+    if (msg.content === 'w!invite') {
+      msg.channel.send('Invite **WOLVES**https://discordapp.com/api/oauth2/authorize?client_id=464720386693529610&permissions=8&scope=bot:');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === 'a!support') {
-      msg.channel.send('support server ---> https://discord.gg/qnSrhEp');
+    if (msg.content === 'w!support') {
+      msg.channel.send('support server ---> https://discord.gg/685rDe');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === 'a!info') {
-      msg.channel.send('creatorul meu este : @MaxPenibilul#0001');
+    if (msg.content === 'w!info') {
+      msg.channel.send('creatorul meu este : @Intact.#5149');
     }
   });
 
 client.on('guildMemberAdd', member => {
-    var joinrole = member.guild.roles.find('name', '|| 𝕬venger - 𝕸embers ||');
+    var joinrole = member.guild.roles.find('name', '🔥 | Members');
     member.addRole(joinrole);
-    let channel  = member.guild.channels.find('name', '🤗【𝓦elcome-𝓖oodbye】😢');
+    let channel  = member.guild.channels.find('name', 'ChatBox);
     let memberavatar  = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
         .setColor('#FF000')
         .setThumbnail(memberavatar)
         .addField('✘ | Name: ', `${member}`)
-        .addField('✘ | Welcome', `**Bine ai venit pe server-ul || 𝕴𝕲 || 𝕴nfinity 𝕲roup. Speram sa te distrezi alaturi de noi. Si nu uita sa citesti :beginner:𝕽ules:beginner:-ul**`)
+      .addField('✘ | Welcome', `**Bine ai venit pe server-ul WOLVES. Speram sa te distrezi alaturi de noi. Si nu uita sa citesti :beginner:𝕽ules:beginner:-ul**`)
         .setTimestamp()
 
         channel.sendEmbed(embed);
 });
 
 client.on('guildMemberRemove', member => {
-    let channel = member.guild.channels.find('name', '🤗【𝓦elcome-𝓖oodbye】😢');
+    let channel = member.guild.channels.find('name', 'ChatBox');
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
